@@ -10,72 +10,163 @@
 
 /* Mobile design */
 /* Navigation bar */
-#nav-bar {
+#header {
+    /* positioning */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     text-align: center;
-    margin: 0 0 2=100px 0;
+    display: flex;
+    justify-content: space-evenly;
+    /* styling */
+    color: #000;
+    box-shadow: 0px 0px 5px #4285F4;
+    text-shadow: 1px 1px #fff;
 }
 
-#spoon {
-    display: block;
+a {
+    color: #fff;
+    text-shadow: 1px 1px rgb(43, 41, 41);
+    text-decoration: none;
+    padding: 0 6px;
+    font-size: 14px;
+}
+
+#header-img {
     object-fit: cover;
     width: 100%;
-    height: 20vh;
+    height: 2em;
 }
 
+#nav-bar {
+    display: flex;
+    position: absolute;
+    top: 20%;
+}
+
+/* Form config */
+input {
+    width: 15rem;
+    height: 1.5rem;
+    text-align: center;
+    margin: 5px;
+    color: #4285F4;
+    border-radius: 5rem;
+    border: none;
+}
+
+input[type=submit] {
+    color: #fff;
+    width: 12rem;
+    background-color: #4285F4;
+}
+
+input:hover {
+    box-shadow: 0 0 10px rgb(146, 146, 146);
+}
+
+#form {
+    width: 17rem;
+    margin: auto;
+    background-color: #d2d2d2;
+    border-radius: 1rem;
+}
 
 /* Body config */
 html {
-    background-color: rgb(26, 55, 78);
+    background-color:  #4b4b4b;
+    background-image: url("../assets/google.png"); 
+    background-size: 100%;
     font-family: 'Open Sans', sans-serif;
+    color: #fff;
 }
 
 h1 {
+    padding: 40px 0 0 0;
     font-family: 'raleway', sans-serif;
+    color: #4285F4;
 }
 
-body {
-    background-color:rgb(255, 240, 224);
-    border-radius: 0.5%;
+body, #after-gallery {
+    background-color:rgba(39, 39, 39, 0.9);
+    border-bottom-right-radius: 1%;
+    border-bottom-left-radius: 1%;
     margin: auto;
     text-align: center;
     width: 90%;
 }
 
+p, #more {
+    margin: 20px;
+    font-size: 16px;
+}
+
 /* Spoon Gallery Images */
 #spoon-gallery {
+    background-color: #F4B400;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-content: center;
-    width: 100%;
+    align-items: center;
 }
 
 .gallery-img {
     object-fit: cover;
-    height: auto;
+    height: 20%;
     width: 90%;
     padding: 10px 0;
 }
 
+#video-box {
+    background-color: #F4B400;
+    width: 100%;
+}
+
+#video {
+    padding: 15px 10px;
+    border: none;
+}
+
 /* Computer design */
 @media only screen and (min-width: 768px) {
-    /* iframe {
-        width = 640px;
-        height = 360px;
-    } */
+    #video {
+        height: 400px;
+    }
 
     /* Spoon Gallery Images */
     #spoon-gallery {
         flex-direction: row;
     }
 
+    .gallery-img:hover {
+        width: 31%;
+    }
+
     .gallery-img {
         width: 30%;
         padding: 20px 0;
-}
+    }
+
+    /* Form config */
+    input {
+        width: 25rem;
+        height: 2rem;
+        margin: 5px;
+    }
+
+    input[type=submit] {
+        width: 20rem;
+    }
+
+    #form {
+        width: 30rem;
+    }
+
+    a {
+        font-size: 18px;
+        padding: 0 70px;
+    }
 }
