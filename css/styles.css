@@ -1,0 +1,81 @@
+/* Imports */
+@font-face {
+    font-family: "raleway";
+    src: url(https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap);
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+}
+
+/* Mobile design */
+/* Navigation bar */
+#nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 2=100px 0;
+}
+
+#spoon {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 20vh;
+}
+
+
+/* Body config */
+html {
+    background-color: rgb(26, 55, 78);
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'raleway', sans-serif;
+}
+
+body {
+    background-color:rgb(255, 240, 224);
+    border-radius: 0.5%;
+    margin: auto;
+    text-align: center;
+    width: 90%;
+}
+
+/* Spoon Gallery Images */
+#spoon-gallery {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+}
+
+.gallery-img {
+    object-fit: cover;
+    height: auto;
+    width: 90%;
+    padding: 10px 0;
+}
+
+/* Computer design */
+@media only screen and (min-width: 768px) {
+    /* iframe {
+        width = 640px;
+        height = 360px;
+    } */
+
+    /* Spoon Gallery Images */
+    #spoon-gallery {
+        flex-direction: row;
+    }
+
+    .gallery-img {
+        width: 30%;
+        padding: 20px 0;
+}
+}
